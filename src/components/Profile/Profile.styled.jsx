@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProfileContainer = styled.div`
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  background-color: #fff;
   color: #9aa4b3;
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@ export const ProfileContainer = styled.div`
   align-items: center;
   padding: 20px 0 0;
   margin: 0 auto;
-  box-shadow: 12px 13px 25px -20px rgba(66, 68, 90, 1);
+  box-shadow: 10px 10px 15px -20px rgba(66, 68, 90, 1);
   border: 1px solid #cfcfcf78;
   border-radius: 5px;
   max-width: 300px;
@@ -22,7 +23,7 @@ export const Description = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 60px 0;
+  padding: 40px 0;
 `;
 
 export const Avatar = styled.img`

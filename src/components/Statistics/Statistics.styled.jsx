@@ -8,6 +8,7 @@ export const StatisticsContainer = styled.section`
   margin: 0 auto;
   font-family: 'Roboto Mono';
   max-width: 300px;
+  border-radius: 2px;
   background-color: #fff;
 `;
 

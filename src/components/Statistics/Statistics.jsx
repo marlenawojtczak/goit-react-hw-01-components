@@ -7,23 +7,15 @@ import {
   Label,
   Percentage,
 } from './Statistics.styled';
+import { getRandomColor } from './getRandomColor';
 
 const Statistics = ({ title, stats }) => {
-  const generateRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
   return (
     <StatisticsContainer>
       <Title>{title}</Title>
       <StatList>
         {stats.map(stat => (
-          <Item key={stat.id} color={generateRandomColor()}>
+          <Item key={stat.id} style={{ backgroundColor: getRandomColor() }}>
             <Label>{stat.label}</Label>
             <Percentage>{stat.percentage}%</Percentage>
           </Item>
@@ -36,6 +28,7 @@ const Statistics = ({ title, stats }) => {
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
   stats: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     percentage: PropTypes.number.isRequired,
   }).isRequired,
